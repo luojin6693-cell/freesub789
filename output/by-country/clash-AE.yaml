@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - xiaohe
+  server: 151.241.19.36
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
+  server: 151.241.19.29
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
   server: 130.49.161.70
   port: 443
   udp: true
@@ -14,18 +28,34 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
-  server: 185.253.116.33
-  port: 14430
+- name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
+  server: LaVa.R6j.Ir
+  port: 8111
   udp: true
   type: vless
-  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
+  uuid: 7ff79f4e-e902-4308-91db-410c6db1310a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: NKnJ79aZqPZWW8_xmiZX1o3-4UVZgC-yJsbVnwucaT8
+    short-id: c9c5a6b5c022de8d
+  servername: tgju.org
+  client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
+  server: 178.104.70.11
+  port: 443
+  udp: true
+  type: vless
+  uuid: 64726966-0000-4000-8000-740000000000
+  tls: true
+  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /vless
+    path: /fp=firefox
     headers:
-      Host: 185.253.116.33
-- name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
+      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
+- name: 🇦🇪 阿联酋 (UAE) 06 - xiaohe
   server: 84.235.244.108
   port: 22573
   udp: true
@@ -36,15 +66,21 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
-  server: 95.174.68.188
-  port: 14430
+- name: 🇦🇪 阿联酋 (UAE) 07 - xiaohe
+  server: 89.22.224.146
+  port: 43788
   udp: true
   type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
+  tls: true
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vless
+    path: /@Marisa_kristi
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,6 +90,9 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 03 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 04 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 05 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 06 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -63,5 +102,8 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 03 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 04 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 05 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 06 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 07 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -5,12 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: 67.159.18.34
-  port: 17001
+  server: 212.102.38.25
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+  type: vless
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 23cb4W9THzBKsrECsLh-A_FcKZfkAtUONoDze8-GnQE
+    short-id: e90360ec7cc61b20
+  servername: udemy.com
+  client-fingerprint: chrome
 - name: 🇨🇿 捷克 (Czech) 02 - xiaohe
   server: 195.123.245.241
   port: 443
@@ -25,7 +31,7 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇨🇿 捷克 (Czech) 03 - xiaohe
-  server: 193.124.17.190
+  server: server.slavkiti.monster
   port: 443
   udp: true
   type: vless
@@ -36,7 +42,7 @@ proxies:
     public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
     short-id: ee1716767f9b
   servername: www.tradingview.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

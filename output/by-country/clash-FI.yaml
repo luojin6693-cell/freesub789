@@ -9,47 +9,14 @@ proxies:
   port: 2053
   udp: true
   type: vless
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  uuid: b79d736d-0f10-4169-b626-362059d18204
   tls: true
   reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-    short-id: d368b94e275ab080
-  servername: www.google.com
-  client-fingerprint: chrome
+    public-key: aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs
+    short-id: 10351b07c712d2a2
+  servername: www.cloudflare.com
+  client-fingerprint: ''
 - name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
-  server: 2.26.3.75
-  port: 443
-  udp: true
-  type: hysteria2
-  password: d5530551-5e9a-4ac5-8539-cee87e38d9e2
-  sni: fi.67chat.ru
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
-  server: 31.77.199.147
-  port: 4443
-  udp: true
-  type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
-    short-id: 7da2eae792187ab9
-  servername: images.unsplash.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
-  server: 177.3.214.156
-  port: 443
-  udp: true
-  type: vless
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6lZ5dkQN2sH9tYca374W4N1n9eCanD_F2FfghcksKSo
-  servername: finlandlanzarotte.live
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -60,34 +27,59 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  server: hw3.divarkhaghazi.com
-  port: 465
+- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
+  server: 129.6.29.252
+  port: 80
   udp: true
-  type: vless
-  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
-  tls: true
-  servername: hw3.divarkhaghazi.com.
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hw3.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
-  server: finp2g.yandex-api.store
+  type: vmess
+  uuid: fe4d2b3e-965f-4389-a6e4-05887ef5fd2b
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
+  server: 6.bmi.ir.asopardaz.ir
+  port: 35176
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: NjcyNmVjMTU1ZWU5NDA5ZDk0ODg1NWM1MzJjZTE3NDk=:ZmU0ZDJiM2U5NjVmNDM4OWE2ZTQwNTg4N2VmNWZkMmI=
+- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  server: 6.bmi.ir.asopardaz.ir
   port: 8443
   udp: true
   type: vless
-  uuid: 78559873-84ef-4cab-a0b2-46d4cd20de4a
+  uuid: fe4d2b3e-965f-4389-a6e4-05887ef5fd2b
+  flow: xtls-rprx-vision
   tls: true
-  servername: finp2g.yandex-api.store
+  reality-opts:
+    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
+    short-id: e915
+  servername: hostgator.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
+  server: 104.18.0.1
+  port: 2053
+  udp: true
+  type: trojan
+  password: gHQP0D7D15
+  sni: marvdasht.phonecomparisonblog.org
   skip-cert-verify: false
-  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /assets
+    path: /
+- name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
+  server: 193.25.216.31
+  port: 443
+  udp: true
+  type: vless
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
+    short-id: a1037b25dcef6aa7
+  servername: sw.golangwikito.cfd
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

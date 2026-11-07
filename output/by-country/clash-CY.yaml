@@ -5,37 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
-  server: 5.253.28.240
-  port: 2443
+  server: 45.86.60.174
+  port: 16443
   udp: true
   type: vless
-  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
+  server: 45.86.60.190
+  port: 443
+  udp: true
+  type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
-    short-id: 92c32de179e5d908
-  servername: deepl.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: rex-eb0bf76b710ce763
-- name: 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
-  server: 5.253.29.254
-  port: 10443
-  udp: true
-  type: vless
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
-- name: 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
-  server: 5.253.29.254
-  port: 14430
-  udp: true
-  type: vless
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.253.29.254
+    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
+    short-id: 41ae8e266bc3346f
+  servername: ee2.japancase.site
+  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -43,7 +30,6 @@ proxy-groups:
   - AUTO
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -51,6 +37,5 @@ proxy-groups:
   proxies:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
 rules:
 - MATCH,PROXIES
