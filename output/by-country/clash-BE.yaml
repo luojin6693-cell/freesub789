@@ -5,12 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇪 比利时 (Belgium) 01 - xiaohe
-  server: 38.180.87.217
-  port: 11943
+  server: 167.17.64.67
+  port: 10303
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: fa938a7d397bda0f23e32143542ac0bb
+  type: vless
+  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RCm8x1FrSdaJ2NY9k5deQQZilwbubeK-4bcH_6E31wk
+    short-id: 14f18ef16e7c32cc
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
